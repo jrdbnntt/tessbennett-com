@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "tessbennett.com",
   "description": "tessbennett.com",
-  "repository": "TODO",
+  "repository": "https://github.com/jrdbnntt/tessbennett-com",
   "main": "",
   "scripts": {
     "build": "gulp build"

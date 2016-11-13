@@ -128,6 +128,7 @@ gulp.task('watch', ['build'], function(){
 gulp.task('deploy', ['build', 'bower'], function() {
     return gulp.src(dirs.build + '/**/*')
         .pipe(ghPages({
+            remoteUrl: pkg.repository,
             force: true
         }));
 });
