@@ -1,0 +1,31 @@
+{
+  "name": "tessbennett-com",
+  "version": "1.0.0",
+  "homepage": "tessbennett.com",
+  "description": "tessbennett.com",
+  "repository": "TODO",
+  "main": "",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "ignore": [
+    "*/**"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bower": "0.0.13",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-header": "^1.8.8",
+    "gulp-pug": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "morgan": "^1.7.0"
+  }
+}
