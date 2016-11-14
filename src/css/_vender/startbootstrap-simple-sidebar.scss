@@ -31,7 +31,7 @@
     line-height: $topbar-height;
     width: 100%;
 
-
+    background-color: $base-background;
 
     .topbar-brand {
         font-size: 18px;
@@ -140,6 +140,7 @@
 
 // Large screens
 @media(min-width: $base-screen-sm) {
+
     #wrapper {
         padding-left: $sidebar-width;
 
@@ -168,6 +169,8 @@
     }
 
     #topbar-wrapper {
+        background-color: inherit;
+
         button {
             display: none;
         }

@@ -16,27 +16,31 @@ a:focus {
     padding-bottom: $base-padding;
     width: 100%;
     max-width: 700px;
+}
+
+#page-content-wrapper {
+    display: block;
+
+    h1 {
+        font-size: $base-fontSize-header;
+    }
 
     p {
         font-size: $base-fontSize;
         max-width: $base-art-maxThumbWidth;
     }
 
-    h1 {
-        font-size: $base-fontSize-header;
-    }
-}
-
-.page-content {
-    display: block;
-    white-space: nowrap;
 }
 
 .art-thumb {
-    display: inline-block;
+    display: block;
     width: auto;
     height: auto;
-    padding-right: $base-padding;
+    margin-bottom: $base-padding * 2;
+
+    img {
+        margin-bottom: $base-padding / 2;
+    }
 }
 
 .art-cover-container {

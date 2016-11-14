@@ -54,9 +54,9 @@ locals.works = {
         title: 'Other works',
         imageRootSrc: 'other_works',
         images: [
-            {src: 'other_work_noah.jpg', title: 'Noah', description: '2016. Watercolor and graphite on paper, 13 x 16 inches.'},
-            {src: 'other_work_everything_is_empty.jpg', title: 'Everything is empty', description: '2015. Screenprint, Loose graphite, 20 x 30 inches.'},
-            {src: 'other_work_monoprint.jpg', title: 'Monoprint', description: '2014. Screenprint, 15 x 14 inches.'}
+            {src: 'other_works_noah.jpg', title: 'Noah', description: '2016. Watercolor and graphite on paper, 13 x 16 inches.'},
+            {src: 'other_works_everything_is_empty.jpg', title: 'Everything is empty', description: '2015. Screenprint, Loose graphite, 20 x 30 inches.'},
+            {src: 'other_works_monoprint.jpg', title: 'Monoprint', description: '2014. Screenprint, 15 x 14 inches.'}
         ]
     },
 

@@ -5,7 +5,6 @@
 (function() {
     'use strict';
 
-    var pInfo = $('.page-info');
     var sideBar = $('#wrapper');
     var win = $(window);
 
@@ -14,9 +13,7 @@
         ev.preventDefault();
         sideBar.toggleClass('toggled');
     });
-    win.scroll(function() {
-        pInfo.css('margin-left', $(this).scrollLeft());
-    });
+
     win.resize(function() {
         if (win.width() > 1024) {
             sideBar.removeClass('toggled');

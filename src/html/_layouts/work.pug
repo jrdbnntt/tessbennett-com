@@ -6,8 +6,8 @@ block content
         
         for img in work.images
             .art-thumb
-                a(href=`/img/originals/works/${work.imageRootSrc}/${img.src}`)
-                    img(src=`/img/thumbs/works/${work.imageRootSrc}/${img.src}` alt=`${img.title}, ${img.description}`)
-                .art-caption #[i=img.title], #{img.description}
+                a(href=`/img/originals/works/${work.imageRootSrc}/${img.src}` target="_blank")
+                    img.img-responsive(src=`/img/thumbs/works/${work.imageRootSrc}/${img.src}` alt=`${img.title}, ${img.description}`)
+                p #[i=img.title], #{img.description}
     else
         h1 Error! Missing work data object
