@@ -4,19 +4,19 @@
 
 #wrapper.toggled { padding-left: 220px; }
 
-#topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #F2F2F2; }
+#topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #FFFFFF; }
 
-#topbar-wrapper .topbar-brand { font-size: 18px; font-style: italic; }
+#topbar-wrapper .topbar-brand { font-size: 18px; }
 
 #topbar-wrapper .topbar-brand a { color: #000; }
 
 #topbar-wrapper .topbar-brand a:hover { background: none; }
 
-#topbar-wrapper button { display: block; position: absolute; right: 20px; top: 11px; padding: 5px 10px; font-size: 18px; background-color: #e5e5e5; }
+#topbar-wrapper button { display: block; position: absolute; right: 20px; top: 11px; padding: 5px 10px; font-size: 18px; background-color: #f2f2f2; }
 
-#topbar-wrapper button:hover { background-color: #d9d9d9; }
+#topbar-wrapper button:hover { background-color: #e6e6e6; }
 
-#sidebar-wrapper { z-index: 1000; position: fixed; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; background: #F2F2F2; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+#sidebar-wrapper { z-index: 1000; position: fixed; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; background: #FFFFFF; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 
 #wrapper.toggled #sidebar-wrapper { width: 220px; }
 
@@ -48,7 +48,7 @@
   #topbar-wrapper { background-color: inherit; }
   #topbar-wrapper button { display: none; } }
 
-body, html { width: 100%; height: 100%; background-color: #F2F2F2; }
+body, html { width: 100%; height: 100%; background-color: #FFFFFF; }
 
 a, a:hover, a:active, a:focus { text-decoration: none; }
 
@@ -59,6 +59,8 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 #page-content-wrapper h1 { font-size: 16px; }
 
 #page-content-wrapper p { font-size: 12px; max-width: 500px; }
+
+#page-content-wrapper .content { max-width: 500px; }
 
 .art-thumb { display: block; width: auto; height: auto; margin-bottom: 40px; }
 
