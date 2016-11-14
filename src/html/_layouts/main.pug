@@ -4,7 +4,7 @@ block vars
 doctype html
 html
     head
-        title= title.length > 0? "Tess Bennett - " + title : "Tess Bennett"
+        title= getTitle(title)
         
         meta(name="theme-color" content="#ffffff")
         meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -29,6 +29,39 @@ html
         link(rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png")
         link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png")
         link(rel="manifest" href="/img/favicon/manifest.json")
+            
+            
+        //- CSS
+        link(type='text/css' rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(type='text/css' rel='stylesheet' href='/css/main.css')
         
     body
-        h1 TODO
+        #wrapper
+            #topbar-wrapper
+                span.topbar-brand: a(href="/index.html") Tess Bennett
+                button.btn(type='button' aria-label='Menu')
+                    span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true')
+            #sidebar-wrapper
+                ul.sidebar-nav
+                    li.divider: span Works
+                    li: a(href='/works/untitled.html') Untitled (new portraits)
+                    li: a(href='/works/cindy.html') Cindy
+                    li: a(href='/works/transfers.html') Transfers
+                    li: a(href='/works/one_week.html') One week
+                    li: a(href='/works/erased_drawings.html') Erased drawings
+                    li: a(href='/works/other_works.html') Other works
+                    
+                    li.divider: span Info
+                    li: a(href='/info/statement.html') Statement
+                    li: a(href='/info/contact.html') Contact
+
+            #page-content-wrapper.container-fluid
+                block content
+                
+                p.copyright
+                    | &copy; #{(new Date()).getYear() + 1900} Tess Bennett
+        
+        //- JAVASCRIPT
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/js/main.min.js')

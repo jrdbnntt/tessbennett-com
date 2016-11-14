@@ -14,6 +14,7 @@ var pug = require('gulp-pug');
 var header = require('gulp-header');
 var bower = require('gulp-bower');
 var ghPages = require('gulp-gh-pages');
+var imageResize = require('gulp-image-resize');
 
 var pkg = require('./package.json');
 
@@ -43,7 +44,11 @@ gulp.task('static', function() {
  * CSS
  */
 gulp.task('css', function() {
-    return gulp.src(dirs.src + '/css/**/*.scss')
+    return gulp.src([
+        dirs.src + '/css/**/*.scss',
+        '!' + dirs.src + '/css/_*',
+        '!' + dirs.src + '/css/_*/**'
+    ])
         .pipe(sourcemaps.init())
         .pipe(sass.sync({
             outputStyle: 'compact',
@@ -70,7 +75,7 @@ gulp.task('html', function() {
     ])
         .pipe(pug({
             pretty: true,
-            locals: {}
+            locals: require(dirs.src + '/html/locals.js')
         }))
         .pipe(gulp.dest(dirs.build));
 });
@@ -85,7 +90,7 @@ gulp.task('js', function() {
     ])
         .pipe(sourcemaps.init())
         .pipe(header(banner, {pkg : pkg}))
-        .pipe(rename(function(path){
+        .pipe(rename(function(path) {
             path.extname = '.min.js';
         }))
         .pipe(uglify({
@@ -104,7 +109,20 @@ gulp.task('js', function() {
  * Resize base images to create needed sizes
  */
 gulp.task('img', function() {
-
+    return gulp.src(dirs.src + '/img/**/*.jpg')
+        .pipe(rename(function(path) {
+            path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
+        }))
+        .pipe(gulp.dest(dirs.build + '/img/originals'))
+        .pipe(imageResize({
+            width: 500,
+            height: 1000,
+            crop: false,
+            upscale: false,
+            quality: 1,
+            imageMagick: true
+        }))
+        .pipe(gulp.dest(dirs.build + '/img/thumbs'));
 });
 
 
@@ -125,7 +143,7 @@ gulp.task('watch', ['build'], function(){
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('deploy', ['build', 'bower'], function() {
+gulp.task('deploy', ['build', 'img', 'bower'], function() {
     return gulp.src(dirs.build + '/**/*')
         .pipe(ghPages({
             remoteUrl: pkg.repository,
@@ -137,7 +155,7 @@ gulp.task('deploy', ['build', 'bower'], function() {
 /**
  * Demo server. Basic static express app pointing to the build folder
  */
-gulp.task('demo', ['build', 'bower'], function(done) {
+gulp.task('demo', function(done) {
     var express = require('express');
     var http = require('http');
     var morgan = require('morgan');
