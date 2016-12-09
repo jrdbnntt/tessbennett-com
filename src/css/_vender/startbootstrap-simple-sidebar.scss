@@ -70,9 +70,6 @@
     margin-left: -$sidebar-width;
     overflow-y: auto;
     background: $base-background;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -123,6 +120,9 @@
             }
         }
 
+        &.active {
+            font-style: italic;
+        }
     }
 
     > .divider {
@@ -135,6 +135,8 @@
     }
 
 }
+
+
 
 
 // Large screens

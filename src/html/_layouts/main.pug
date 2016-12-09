@@ -44,16 +44,16 @@ html
             #sidebar-wrapper
                 ul.sidebar-nav
                     li.divider: span Works
-                    li: a(href='/works/untitled.html') Untitled (new portraits)
-                    li: a(href='/works/cindy.html') Cindy
-                    li: a(href='/works/transfers.html') Transfers
-                    li: a(href='/works/one_week.html') One week
-                    li: a(href='/works/erased_drawings.html') Erased drawings
-                    li: a(href='/works/other_works.html') Other works
+                    li(class=title === works.untitled.title? 'active' : ''): a(href='/works/untitled.html') Untitled (new portraits)
+                    li(class=title === works.cindy.title? 'active' : ''): a(href='/works/cindy.html') Cindy
+                    li(class=title === works.transfers.title? 'active' : ''): a(href='/works/transfers.html') Transfers
+                    li(class=title === works.one_week.title? 'active' : ''): a(href='/works/one_week.html') One week
+                    li(class=title === works.erased_drawings.title? 'active' : ''): a(href='/works/erased_drawings.html') Erased drawings
+                    li(class=title === works.other_works.title? 'active' : ''): a(href='/works/other_works.html') Other works
                     
                     li.divider: span Info
-                    li: a(href='/info/statement.html') Statement
-                    li: a(href='/info/contact.html') Contact
+                    li(class=title === 'Statement'? 'active' : ''): a(href='/info/statement.html') Statement
+                    li(class=title === 'Contact'? 'active' : ''): a(href='/info/contact.html') Contact
 
             #page-content-wrapper.container-fluid
                 .content
