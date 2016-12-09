@@ -1,0 +1,25 @@
+.art-thumb {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: $base-padding * 2;
+
+    img {
+        margin-bottom: $base-padding / 2;
+    }
+}
+
+.art-cover-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.art-cover {
+    position: absolute;
+    width: inherit;
+    height: auto;
+    left: 0;
+    top: 0;
+}
