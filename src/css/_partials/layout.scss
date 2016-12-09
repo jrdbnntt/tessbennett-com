@@ -28,7 +28,10 @@ html, body {
 
     .content {
         flex-grow: 1;
-        max-width: $base-art-maxThumbWidth;
+        
+        p {
+            max-width: $base-art-maxThumbWidth;
+        }
     }
 
     .footer {

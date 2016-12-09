@@ -108,12 +108,11 @@ gulp.task('js', function() {
 /**
  * Resize base images to create needed sizes
  */
-gulp.task('img', function() {
-    return gulp.src(dirs.src + '/img/**/*.jpg')
+gulp.task('img:resize', function() {
+    return gulp.src(dirs.src + '/img/originals/**/*.jpg')
         .pipe(rename(function(path) {
             path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
         }))
-        .pipe(gulp.dest(dirs.build + '/img/originals'))
         .pipe(imageResize({
             width: 500,
             height: 1000,
@@ -124,6 +123,15 @@ gulp.task('img', function() {
         }))
         .pipe(gulp.dest(dirs.build + '/img/thumbs'));
 });
+gulp.task('img:copy', function() {
+    return gulp.src(dirs.src + '/img/**/*.jpg')
+        .pipe(rename(function(path) {
+            path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
+        }))
+        .pipe(gulp.dest(dirs.build + '/img'));
+});
+
+gulp.task('img', ['img:copy', 'img:resize']);
 
 
 gulp.task('bower', function() {
@@ -133,7 +141,7 @@ gulp.task('bower', function() {
 });
 
 
-gulp.task('build', ['css', 'html', 'js', 'static']);
+gulp.task('build', ['bower', 'css', 'html', 'js', 'static']);
 
 gulp.task('watch', ['build'], function(){
     return gulp.watch([dirs.src + '/**/*'], ['build']);
