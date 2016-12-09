@@ -1,12 +1,10 @@
 /*! Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com) Code licensed under the Apache License v2.0. For details, see http://www.apache.org/licenses/LICENSE-2.0. */
 /* Toggle Styles */
-#wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; height: 100%; position: relative; }
+#wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; min-height: 100%; position: relative; }
 
 #wrapper.toggled { padding-left: 220px; }
 
 #topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #FFFFFF; }
-
-#topbar-wrapper .topbar-brand { font-size: 18px; }
 
 #topbar-wrapper .topbar-brand a { color: #000; }
 
@@ -20,7 +18,7 @@
 
 #wrapper.toggled #sidebar-wrapper { width: 220px; }
 
-#page-content-wrapper { width: 100%; height: 100%; position: absolute; padding: 60px 15px 15px 15px; }
+#page-content-wrapper { width: 100%; min-height: 100%; position: absolute; padding: 60px 15px 15px 15px; }
 
 #wrapper.toggled #page-content-wrapper { position: absolute; margin-right: -200px; }
 
@@ -35,6 +33,8 @@
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus { text-decoration: none; }
 
+.sidebar-nav li.active { font-style: italic; }
+
 .sidebar-nav > .divider { font-weight: bold; margin-top: 1em; }
 
 .sidebar-nav > .divider:first-of-type { margin-top: 0px; }
@@ -48,26 +48,34 @@
   #topbar-wrapper { background-color: inherit; }
   #topbar-wrapper button { display: none; } }
 
-body, html { width: 100%; height: 100%; background-color: #FFFFFF; }
-
-a, a:hover, a:active, a:focus { text-decoration: none; }
+html, body { position: relative; width: 100%; height: 100%; background-color: #FFFFFF; }
 
 .page-info { display: block; padding-bottom: 20px; width: 100%; max-width: 700px; }
 
-#page-content-wrapper { display: block; }
+#page-content-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; min-height: 100vh; }
 
 #page-content-wrapper h1 { font-size: 16px; }
 
 #page-content-wrapper p { font-size: 12px; max-width: 500px; }
 
-#page-content-wrapper .content { max-width: 500px; }
+#page-content-wrapper .content { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+
+#page-content-wrapper .content p { max-width: 500px; }
+
+#page-content-wrapper .footer { margin-top: 2em; }
+
+html { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a, a:hover, a:active, a:focus { text-decoration: none; }
+
+.copyright { color: gray; }
 
 .art-thumb { display: block; width: auto; height: auto; margin-bottom: 40px; }
 
 .art-thumb img { margin-bottom: 10px; }
 
-.art-cover-container { position: relative; width: 100%; height: 100%; overflow-x: hidden; }
+.art-cover-container { width: 100%; height: 100%; overflow-x: hidden; }
 
-.art-cover { position: absolute; width: inherit; height: auto; left: 0; top: 0; }
+.art-cover-container img { width: 100%; height: auto; }
 
 /*# sourceMappingURL=main.css.map */
