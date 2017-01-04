@@ -29,7 +29,8 @@ var banner =
 
 var dirs = {
     build: __dirname + '/build',
-    src: __dirname + '/src'
+    src: __dirname + '/src',
+    cloud: __dirname + '/cloud'
 };
 
 /**
@@ -109,7 +110,7 @@ gulp.task('js', function() {
  * Resize base images to create needed sizes
  */
 gulp.task('img:resize', function() {
-    return gulp.src(dirs.src + '/img/originals/**/*.jpg')
+    return gulp.src(dirs.cloud + '/img/originals/**/*.jpg')
         .pipe(rename(function(path) {
             path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
         }))
@@ -124,7 +125,7 @@ gulp.task('img:resize', function() {
         .pipe(gulp.dest(dirs.build + '/img/thumbs'));
 });
 gulp.task('img:copy', function() {
-    return gulp.src(dirs.src + '/img/**/*.jpg')
+    return gulp.src(dirs.cloud + '/img/**/*.jpg')
         .pipe(rename(function(path) {
             path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
         }))
