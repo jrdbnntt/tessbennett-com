@@ -5,3 +5,4 @@ bower_components
 desktop.ini
 /src/img
 /cloud
+npm-debug*.log
