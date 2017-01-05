@@ -3,6 +3,7 @@
     width: auto;
     height: auto;
     margin-bottom: $base-padding * 2;
+    max-width: $base-art-maxThumbWidth;
 
     img {
         margin-bottom: $base-padding / 2;
