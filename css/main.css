@@ -70,11 +70,11 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .copyright { color: gray; }
 
-.art-thumb { display: block; width: auto; height: auto; margin-bottom: 40px; }
+.art-thumb { display: block; width: auto; height: auto; margin-bottom: 40px; max-width: 500px; }
 
 .art-thumb img { margin-bottom: 10px; }
 
-.art-cover-container { width: 100%; height: 100%; overflow-x: hidden; }
+.art-cover-container { width: 900px; height: auto; max-width: 100%; max-height: 100%; overflow-x: hidden; }
 
 .art-cover-container img { width: 100%; height: auto; }
 
