@@ -1,16 +1,18 @@
-/*! Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com) Code licensed under the Apache License v2.0. For details, see http://www.apache.org/licenses/LICENSE-2.0. */
+/*! Original CSS from: Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com) Code licensed under the Apache License v2.0. For details, see http://www.apache.org/licenses/LICENSE-2.0. */
 /* Toggle Styles */
 #wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; min-height: 100%; position: relative; }
 
 #wrapper.toggled { padding-left: 220px; }
 
-#topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #FFFFFF; }
+#topbar-wrapper { pointer-events: none; z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #FFFFFF; }
+
+#topbar-wrapper .topbar-brand { pointer-events: auto; }
 
 #topbar-wrapper .topbar-brand a { color: #000; }
 
 #topbar-wrapper .topbar-brand a:hover { background: none; }
 
-#topbar-wrapper button { display: block; position: absolute; right: 20px; top: 11px; padding: 5px 10px; font-size: 18px; background-color: #f2f2f2; }
+#topbar-wrapper button { pointer-events: auto; display: block; position: absolute; right: 20px; top: 11px; padding: 5px 10px; font-size: 18px; background-color: #f2f2f2; }
 
 #topbar-wrapper button:hover { background-color: #e6e6e6; }
 
