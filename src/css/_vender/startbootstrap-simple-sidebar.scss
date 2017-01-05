@@ -1,4 +1,6 @@
 /*!
+ * Original CSS from:
+ *
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -19,22 +21,22 @@
 }
 
 #topbar-wrapper {
+    pointer-events: none;
     z-index: 1001;
     position: fixed;
     display: block;
-
     top: 0;
     left: 0px;
     padding-left: $base-padding;
-
     height: $topbar-height;
     line-height: $topbar-height;
     width: 100%;
-
     background-color: $base-background;
+
 
     .topbar-brand {
         // font-size: 18px;
+        pointer-events: auto;
 
         a {
             color: #000;
@@ -46,6 +48,7 @@
     }
 
     button {
+        pointer-events: auto;
         display: block;
         position: absolute;
         right: $base-padding;
