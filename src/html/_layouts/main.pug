@@ -1,17 +1,18 @@
 block vars
-    - title = ""
+    -
+        title = ""
 
 doctype html
 html
     head
-        title= getTitle(title)
-        
+        title=getTitle(title)
+
         meta(name="theme-color" content="#ffffff")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(property="og:title" content="Tess Bennett")
         meta(property="og:image" content="http://tessbennett.com/img/share-banner.jpg")
         meta(property="og:url" content="http://tessbennett.com")
-        
+
         //- Favicon
         meta(name="msapplication-TileColor" content="#ffffff")
         meta(name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png")
@@ -24,46 +25,46 @@ html
         link(rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png")
         link(rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png")
         link(rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png")
-        link(rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png")
+        link(rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png")
         link(rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png")
         link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png")
         link(rel="manifest" href="/img/favicon/manifest.json")
-            
-            
+
+
         //- CSS
-        link(type='text/css' rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
-        link(type='text/css' rel='stylesheet' href='/css/main.css')
-        
+        link(type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(type="text/css" rel="stylesheet" href="/css/main.css")
+
     body
         #wrapper
             #topbar-wrapper
                 span.topbar-brand: a(href="/index.html") Tess Bennett
-                button.btn(type='button' aria-label='Menu')
-                    span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true')
+                button.btn(type="button" aria-label="Menu")
+                    span.glyphicon.glyphicon-menu-hamburger(aria-hidden="true")
             #sidebar-wrapper
                 ul.sidebar-nav
                     li.divider: span Works
-                    //- li(class=title === works.untitled.title? 'active' : ''): a(href='/works/untitled.html') Untitled (new portraits)
-                    li(class=title === works.cindy.title? 'active' : ''): a(href='/works/cindy.html') Cindy
-                    li(class=title === works.transfers.title? 'active' : ''): a(href='/works/transfers.html') Transfers
-                    li(class=title === works.one_week.title? 'active' : ''): a(href='/works/one_week.html') One week
-                    li(class=title === works.erased_drawings.title? 'active' : ''): a(href='/works/erased_drawings.html') Erased drawings
-                    li(class=title === works.other_works.title? 'active' : ''): a(href='/works/other_works.html') Other works
-                    
+                    li(class=title === works.new_portraits.title? "active" : ""): a(href="/works/new_portraits.html") New Portraits
+                    li(class=title === works.cindy.title? "active" : ""): a(href="/works/cindy.html") Cindy
+                    li(class=title === works.transfers.title? "active" : ""): a(href="/works/transfers.html") Transfers
+                    li(class=title === works.one_week.title? "active" : ""): a(href="/works/one_week.html") One week
+                    li(class=title === works.erased_drawings.title? "active" : ""): a(href="/works/erased_drawings.html") Erased drawings
+                    li(class=title === works.other_works.title? "active" : ""): a(href="/works/other_works.html") Other works
+
                     li.divider: span Info
-                    li(class=title === 'Statement'? 'active' : ''): a(href='/info/statement.html') Statement
-                    li(class=title === 'Contact'? 'active' : ''): a(href='/info/contact.html') Contact
+                    li(class=title === "Statement"? "active" : ""): a(href="/info/statement.html") Statement
+                    li(class=title === "Contact"? "active" : ""): a(href="/info/contact.html") Contact
 
             #page-content-wrapper.container-fluid
                 .content
                     block content
-                
+
                 .footer
                     p.copyright
                         | &copy; #{(new Date()).getYear() + 1900} Tess Bennett
-        
+
         //- JAVASCRIPT
-        script(src='/bower_components/jquery/dist/jquery.min.js')
-        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
-        script(src='/js/main.min.js')
+        script(src="/bower_components/jquery/dist/jquery.min.js")
+        script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+        script(src="/js/main.min.js")

@@ -72,12 +72,17 @@ locals.works = {
         ]
     },
 
-    untitled: {
-        title: 'Untitled (new portraits)',
-        imageRootSrc: 'untitled',
+    new_portraits: {
+        title: 'New Portraits',
+        imageRootSrc: 'new_portraits',
         images: [
-            {src: 'TODO.jpg', title: 'Untitled', description: '2016. Watercolor and graphite on paper, 51 x # inches.'},
-            {src: 'TODO.jpg', title: 'Untitled', description: '2016. Watercolor and graphite on paper, 51 x # inches.'}
+
+            {src: 'clouds_looked_like.jpg', title: 'what clouds looked like', description: '2016. Watercolor and graphite on paper, 51 x 78 inches.'},
+            {src: 'time_spent.jpg', title: 'time spent walking home', description: '2016. Watercolor and graphite on paper, 51 x 88 inches.'},
+            {src: 'clouds_looked_like_detail_one.jpg', beforeTitle: 'Detail of', title: 'what clouds looked like', description: '2016. Watercolor and graphite.'},
+            {src: 'clouds_looked_like_detail_two.jpg', beforeTitle: 'Detail of', title: 'what clouds looked like', description: '2016. Watercolor and graphite.'},
+            {src: 'time_spent_detail_one.jpg', beforeTitle: 'Detail of', title: 'time spent walking home', description: '2016. Watercolor and graphite.'},
+            {src: 'time_spent_detail_two.jpg', beforeTitle: 'Detail of', title: 'time spent walking home', description: '2016. Watercolor and graphite.'}
         ]
     }
 };
