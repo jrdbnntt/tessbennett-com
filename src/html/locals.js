@@ -48,9 +48,9 @@ locals.works = {
         link: '/works/transfers.html',
         imageRootSrc: 'transfers',
         images: [
-            {src: 'transfers.jpg', title: 'Transfers', description: '2015. Graphite.'},
-            {src: 'transfers_stairs_that_lead_to_nowhere.jpg', title: 'Stairs that lead to nowhere (cropped version)', description: '2015. Graphite on paper, 40 x 60 inches.'},
-            {src: 'transfers_empty_picture_frames.jpg', title: 'Empty picture frames (cropped version)', description: '2015. Graphite on paper, 40 x 60 inches.'},
+            {src: 'transfers.jpg', title: 'Transfers', description: '2015. Graphite transfer.'},
+            {src: 'transfers_stairs_that_lead_to_nowhere.jpg', title: 'Stairs that lead to nowhere (cropped version)', description: '2015. Graphite transfer, 40 x 60 inches.'},
+            {src: 'transfers_empty_picture_frames.jpg', title: 'Empty picture frames (cropped version)', description: '2015. Graphite transfer, 40 x 60 inches.'},
             {src: 'transfers_plates_1.jpg', title: 'Transfers (plates)', description: '2015. Graphite on tracing paper.'},
             {src: 'transfers_plates_2.jpg', title: 'Transfers (plates)', description: '2015. Graphite on tracing paper.'}
         ]
@@ -86,7 +86,7 @@ locals.works = {
         link: '/works/other_works.html',
         imageRootSrc: 'other_works',
         images: [
-            {src: 'other_works_moonrise.jpg', title: 'Moonrise', description: '2017. Graphite on paper, 16 x 20 inches.'},
+            {src: 'other_works_moonrise.jpg', title: 'Moonrise', description: '2017. Graphite transfer, 16 x 20 inches.'},
             {src: 'other_works_noah.jpg', title: 'Noah', description: '2016. Watercolor and graphite on paper, 13 x 16 inches.'},
             {src: 'other_works_everything_is_empty.jpg', title: 'Everything is empty', description: '2015. Screenprint, Loose graphite, 20 x 30 inches.'},
             {src: 'other_works_monoprint.jpg', title: 'Monoprint', description: '2014. Screenprint, 15 x 14 inches.'}
