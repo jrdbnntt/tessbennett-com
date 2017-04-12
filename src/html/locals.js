@@ -48,9 +48,9 @@ locals.works = {
         link: '/works/transfers.html',
         imageRootSrc: 'transfers',
         images: [
-            {src: 'transfers.jpg', title: 'Transfers', description: '2015. Graphite transfer.'},
-            {src: 'transfers_stairs_that_lead_to_nowhere.jpg', title: 'Stairs that lead to nowhere (cropped version)', description: '2015. Graphite transfer, 40 x 60 inches.'},
-            {src: 'transfers_empty_picture_frames.jpg', title: 'Empty picture frames (cropped version)', description: '2015. Graphite transfer, 40 x 60 inches.'},
+            {src: 'transfers.jpg', title: 'Transfers', description: '2015. Graphite transfers.'},
+            {src: 'transfers_stairs_that_lead_to_nowhere.jpg', title: 'Stairs that lead to nowhere (cropped version)', description: '2015. Graphite transfers, 40 x 60 inches.'},
+            {src: 'transfers_empty_picture_frames.jpg', title: 'Empty picture frames (cropped version)', description: '2015. Graphite transfers, 40 x 60 inches.'},
             {src: 'transfers_plates_1.jpg', title: 'Transfers (plates)', description: '2015. Graphite on tracing paper.'},
             {src: 'transfers_plates_2.jpg', title: 'Transfers (plates)', description: '2015. Graphite on tracing paper.'}
         ]
