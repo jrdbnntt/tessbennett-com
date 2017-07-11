@@ -1,6 +1,6 @@
 /*! Original CSS from: Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com) Code licensed under the Apache License v2.0. For details, see http://www.apache.org/licenses/LICENSE-2.0. */
 /* Toggle Styles */
-#wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; min-height: 100%; position: relative; }
+#wrapper { padding-left: 0; transition: all 0.5s ease; width: 100%; min-height: 100%; position: relative; }
 
 #wrapper.toggled { padding-left: 220px; }
 
@@ -16,7 +16,7 @@
 
 #topbar-wrapper button:hover { background-color: #e6e6e6; }
 
-#sidebar-wrapper { z-index: 1000; position: fixed; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; background: #FFFFFF; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+#sidebar-wrapper { z-index: 1000; position: fixed; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; background: #FFFFFF; transition: all 0.5s ease; }
 
 #wrapper.toggled #sidebar-wrapper { width: 220px; }
 
