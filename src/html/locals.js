@@ -13,6 +13,26 @@ locals.getTitle = function (subtitle) {
 }
 
 locals.works = {
+  ezra: {
+    title: 'Ezra (and trash yard)',
+    link: '/works/ezra.html',
+    imageRootSrc: 'ezra',
+    images: [
+      {src: 'ezra.jpg', title: 'Ezra (and trash yard)', description: '2017. Watercolor and graphite on paper, 41 x 30  inches.'},
+      {src: 'ezra_detail.jpg', beforeTitle: 'Detail of', title: 'Ezra (and trash yard)'}
+    ]
+  },
+
+  second_to_last: {
+    title: 'Second to last',
+    link: '/works/second_to_last.html',
+    imageRootSrc: 'second_to_last',
+    images: [
+      {src: 'second_to_last.jpg', title: 'second to last', description: ' 2017. Watercolor and graphite on paper, 16 x 20 inches.'},
+      {src: 'second_to_last_detail.jpg', beforeTitle: 'Detail of', title: 'second to last'}
+    ]
+  },
+
   pair: {
     title: 'Pair',
     link: '/works/pair.html',
