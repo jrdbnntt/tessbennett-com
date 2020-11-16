@@ -110,7 +110,7 @@ gulp.task('img:resize', function imgResize() {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
   }))
   .pipe(imageResize({
-    width: 500,
+    width: 650,
     height: 1000,
     crop: false,
     upscale: false,
@@ -136,17 +136,17 @@ gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild() {
   return gulp.watch(dirs.src + '/**/*', gulp.parallel('build'))
 }))
 
+
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), function deployToGithubPages() {
+gulp.task('publishCurrentBuild', function deployToGithubPages(done) {
   var ghPages = require('gh-pages')
-  return gulp.src(dirs.build + '/**/*')
-  .pipe(ghPages({
-    remoteUrl: pkg.repository,
+  ghPages.publish(dirs.build, {
     force: true
-  }))
-}))
+  }, done)
+})
+gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), 'publishCurrentBuild'))
 
 var externalIp = '120.0.0.1'
 gulp.task('resolveIp', function (done) {
